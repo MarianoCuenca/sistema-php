@@ -23,11 +23,11 @@
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Generos
+                    Categorias
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="/sistema-php/views/generos/lista.php">Listar</a>
-                    <a class="dropdown-item" href="/sistema-php/views/generos/crear.php">Crear</a>
+                    <a class="dropdown-item" href="/sistema-php/views/categorias/index.php">Listar</a>
+                    <a class="dropdown-item" href="/sistema-php/views/categorias/crear.php">Crear</a>
                 </div>
             </li>
             <!-- <li class="nav-item">

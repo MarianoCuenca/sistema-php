@@ -11,6 +11,9 @@
     <div class="container">
         <div class="container text-center m-5">
             <h3>Lista de Peliculas</h3>
+            <div class="row pull-right">
+                <a href="crear.php" class="fa fa-plus btn btn-primary btn-sm"> CREAR</a>
+            </div>
         </div>
         
             <?php
@@ -36,15 +39,10 @@
                                     echo "<td>" . $row['name'] . "</td>";
                                     echo "<td>" . $row['description'] . "</td>";
                                     echo "<td>" . $row['year'] . "</td>";
-                                    // echo "<td>";
-                                    //     echo "<a href='read.php?id=". $row['id'] ."' title='View Record' data-toggle='tooltip'><span class='glyphicon glyphicon-eye-open'></span></a>";
-                                    //     echo "<a href='update.php?id=". $row['id'] ."' title='Update Record' data-toggle='tooltip'><span class='glyphicon glyphicon-pencil'></span></a>";
-                                    //     echo "<a href='delete.php?id=". $row['id'] ."' title='Delete Record' data-toggle='tooltip'><span class='glyphicon glyphicon-trash'></span></a>";
-                                    // echo "</td>";
                                     echo '
                                         <td>
                                             <a href="edit.php?id='.$row['id'].'" title="Editar datos" class="btn btn-primary btn-sm"><span class="fa fa-pencil" aria-hidden="true"></span></a>
-                                            <a href="index.php?aksi=delete&id='.$row['id'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['name'].'?\')" class="btn btn-danger btn-sm"><span class="fa fa-trash" aria-hidden="true"></span></a>
+                                            <a href="../../functions/peliculas/deletePelicula.php?id='.$row['id'].'" title="Eliminar" onclick="return confirm(\'Esta seguro de borrar los datos '.$row['name'].'?\')" class="btn btn-danger btn-sm"><span class="fa fa-trash" aria-hidden="true"></span></a>
                                         </td>
                                     </tr>
                                     ';
