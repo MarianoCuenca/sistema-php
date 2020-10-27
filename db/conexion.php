@@ -1,25 +1,12 @@
 <?php
-
-class conectar {
-    private $servidor = "localhost";
-    private $usuario = "root";
-    private $password = "";
-    private $bd = "peliculasdb";
-
-    public function conexion() {
-        $conexion=mysqli_connect(
-            $this->servidor,
-            $this->usuario,
-            $this->password,
-            $this->bd
-        );
-
-        return $conexion;
+    define('DB_SERVER', 'localhost');
+    define('DB_USERNAME', 'root');
+    define('DB_PASSWORD', '');
+    define('DB_NAME', 'peliculasdb');
+    
+    $link = mysqli_connect(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_NAME);
+    
+    if($link === false){
+        die("ERROR: No se pudo establecer la conexion. " . mysqli_connect_error());
     }
-}
-
-$obj = new conectar();
-
-if($obj->conexion()){
-    echo "conectado";
-}
+?>
